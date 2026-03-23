@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Контакты — ТЛ им. Д. Мавроди</title>
+  <meta name="description" content="Контакты Теоретического лицея им. Д. Мавроди, мун. Комрат." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <a class="brand" href="index.html">
+        <span class="logo"><img src="assets/img/logo.png" alt=""></span>
+        <span class="title">
+          <strong>ТЛ им. Д. Мавроди</strong>
+          <span>мун. Комрат</span>
+        </span>
+      </a>
+      <button class="burger" data-menu-open><span></span></button>
+    </div>
+  </div>
+</header>
+
+ <!-- MENU -->
+ <div class="overlay" data-overlay>
+    <div class="backdrop" data-backdrop></div>
+
+    <div class="panel" role="dialog" aria-modal="true" aria-label="Меню сайта">
+      <div class="panel-head">
+        <b>Меню</b>
+        <button class="close" type="button" aria-label="Закрыть меню" data-menu-close>✕</button>
+      </div>
+
+      <nav class="menu" aria-label="Навигация">
+        <a href="index.html">
+          <b>Главная</b>
+          <span>Главная страница</span>
+        </a>
+        <a href="about.html">
+          <b>О нас</b>
+          <span>Информация о лицее, руководство, история</span>
+        </a>
+        <a href="admission.html">
+          <b>Приём</b>
+          <span>Правила, сроки, документы для поступления</span>
+        </a>
+        <a href="news.html">
+          <b>Новости</b>
+          <span>Лента событий и обновлений лицея</span>
+        </a>
+        <a href="timetable.html">
+          <b>Расписание</b>
+          <span>Занятия, изменения, актуальная версия</span>
+        </a>
+        <a href="teachers.html">
+          <b>Преподаватели</b>
+          <span>Состав педагогов и направления</span>
+        </a>
+        <a href="documents.html">
+          <b>Документы</b>
+          <span>Приказы, положения, протоколы и др.</span>
+        </a>
+        <a href="contacts.html">
+          <b>Контакты</b>
+          <span>Адрес, карта, форма обратной связи</span>
+        </a>
+        <a href="vacancies.html">
+          <b>Вакансии</b>
+          <span>Открытые вакансии и требования</span>
+        </a>
+        <a href="admin.html">
+          <b>Админ (новости)</b>
+          <span>Добавление новостей и выгрузка news.json</span>
+        </a>
+        <a href="admin-docs.html">
+          <b>Админ (документы)</b>
+          <span>Добавление документов и выгрузка documents.json</span>
+        </a>
+        <a href="admin-timetable.html">
+          <b>Админ (расписание)</b>
+          <span>Добавление расписания и выгрузка timetable.json</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+<main>
+  <section class="section alt">
+    <div class="container">
+      <h2>Контакты</h2>
+      <p class="lead">Свяжитесь с нами удобным способом</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px" id="grid">
+
+        <!-- INFO -->
+        <div class="card padded">
+          <b>Адрес</b>
+          <p>Молдова, мун. Комрат<br>ул. Островского, 2</p>
+
+          <b>Электронная почта</b>
+          <p><a href="mailto:lic.01.mavrodi@gmail.com">lic.01.mavrodi@gmail.com</a></p>
+
+          <b>Карта</b>
+          <div style="margin-top:10px;border-radius:16px;overflow:hidden;border:1px solid var(--border)">
+            <iframe
+              src="https://www.google.com/maps?q=Комрат,+ул.+Островского+2&output=embed"
+              width="100%" height="260" style="border:0" loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <div class="card padded">
+          <h3>Написать нам</h3>
+
+          <form id="contactForm">
+            <input type="text" name="from_name" placeholder="Ваше имя" required
+              style="width:100%;margin-bottom:10px;padding:10px;border-radius:14px;border:1px solid var(--border)">
+
+            <input type="email" name="from_email" placeholder="Ваш email" required
+              style="width:100%;margin-bottom:10px;padding:10px;border-radius:14px;border:1px solid var(--border)">
+
+            <textarea name="message" placeholder="Сообщение" required rows="6"
+              style="width:100%;margin-bottom:10px;padding:10px;border-radius:14px;border:1px solid var(--border)"></textarea>
+
+            <button class="btn primary" type="submit">Отправить</button>
+            <div id="formStatus" style="margin-top:10px;font-size:13px"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    © <span id="year"></span> ТЛ им. Д. Мавроди
+  </div>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="assets/js/app.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="assets/js/contact-form.js"></script>
+
+<script>
+  const mq = window.matchMedia("(max-width: 900px)");
+  const grid = document.getElementById("grid");
+  function apply(){grid.style.gridTemplateColumns = mq.matches ? "1fr" : "1fr 1fr";}
+  mq.addEventListener("change", apply); apply();
+</script>
+
+</body>
+</html>

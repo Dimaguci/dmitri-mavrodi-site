@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>О нас — ТЛ им. Д. Мавроди</title>
+  <meta name="description" content="Официальная информация о Теоретическом лицее им. Дмитрия Мавроди, мун. Комрат." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <a class="brand" href="index.html">
+        <span class="logo">
+          <img src="assets/img/logo.png" alt="Логотип ТЛ им. Д. Мавроди">
+        </span>
+        <span class="title">
+          <strong>ТЛ им. Д. Мавроди</strong>
+          <span>мун. Комрат</span>
+        </span>
+      </a>
+      <button class="burger" type="button" data-menu-open><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- MENU -->
+ <div class="overlay" data-overlay>
+    <div class="backdrop" data-backdrop></div>
+
+    <div class="panel" role="dialog" aria-modal="true" aria-label="Меню сайта">
+      <div class="panel-head">
+        <b>Меню</b>
+        <button class="close" type="button" aria-label="Закрыть меню" data-menu-close>✕</button>
+      </div>
+
+      <nav class="menu" aria-label="Навигация">
+        <a href="index.html">
+          <b>Главная</b>
+          <span>Главная страница</span>
+        </a>
+        <a href="about.html">
+          <b>О нас</b>
+          <span>Информация о лицее, руководство, история</span>
+        </a>
+        <a href="admission.html">
+          <b>Приём</b>
+          <span>Правила, сроки, документы для поступления</span>
+        </a>
+        <a href="news.html">
+          <b>Новости</b>
+          <span>Лента событий и обновлений лицея</span>
+        </a>
+        <a href="timetable.html">
+          <b>Расписание</b>
+          <span>Занятия, изменения, актуальная версия</span>
+        </a>
+        <a href="teachers.html">
+          <b>Преподаватели</b>
+          <span>Состав педагогов и направления</span>
+        </a>
+        <a href="documents.html">
+          <b>Документы</b>
+          <span>Приказы, положения, протоколы и др.</span>
+        </a>
+        <a href="contacts.html">
+          <b>Контакты</b>
+          <span>Адрес, карта, форма обратной связи</span>
+        </a>
+        <a href="vacancies.html">
+          <b>Вакансии</b>
+          <span>Открытые вакансии и требования</span>
+        </a>
+        <a href="admin.html">
+          <b>Админ (новости)</b>
+          <span>Добавление новостей и выгрузка news.json</span>
+        </a>
+        <a href="admin-docs.html">
+          <b>Админ (документы)</b>
+          <span>Добавление документов и выгрузка documents.json</span>
+        </a>
+        <a href="admin-timetable.html">
+          <b>Админ (расписание)</b>
+          <span>Добавление расписания и выгрузка timetable.json</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+
+<main>
+
+  <section class="section">
+    <div class="container">
+      <h2>О лицее</h2>
+      <p class="lead">
+        Теоретический лицей им. Дмитрия Мавроди — современное государственное образовательное учреждение,
+        расположенное в мун. Комрат.
+      </p>
+
+      <div style="margin-top:16px;border-radius:20px;overflow:hidden;border:1px solid var(--border)">
+        <img src="assets/img/about/building.jpg"
+             alt="Здание Теоретического лицея им. Д. Мавроди"
+             style="width:100%;height:auto;display:block">
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO -->
+  <section class="section alt">
+    <div class="container">
+
+      <div class="card padded" style="margin-bottom:16px;">
+        <h3>Общая информация</h3>
+        <p>
+          ПУ «Теоретический лицей им. Дмитрия Мавроди» — государственное учебное заведение,
+          осуществляющее образовательную деятельность в соответствии с национальными стандартами
+          Республики Молдова.
+        </p>
+        <p>
+          Основной целью лицея является формирование интеллектуально развитой,
+          социально ответственной личности, готовой к продолжению образования и
+          активному участию в жизни общества.
+        </p>
+      </div>
+
+      <div class="card padded" style="margin-bottom:16px;">
+        <h3>История и традиции</h3>
+        <p>
+          Лицей имеет более чем полувековую историю. В 2024 году учреждение отметило
+          <b>55-летие со дня основания</b>.
+        </p>
+        <p>
+          В лицее действует мини-музей истории и этнографии, способствующий
+          сохранению культурного наследия региона и воспитанию уважения к традициям.
+        </p>
+      </div>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h3>Руководство лицея</h3>
+
+      <div style="
+        margin-top:16px;
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+        gap:16px;
+      ">
+
+        <div class="card padded" style="text-align:center">
+          <img src="assets/img/about/director.jpg" alt="Болгар Максим Андреевич"
+               style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px;border:1px solid var(--border)">
+          <b style="display:block;margin-top:10px">Болгар Максим Андреевич</b>
+          <span style="font-size:13px;color:var(--muted)">Директор лицея</span>
+        </div>
+
+        <div class="card padded" style="text-align:center">
+          <img src="assets/img/about/deputy-vr.jpg" alt="Гучь Дмитрий Дмитриевич"
+               style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px;border:1px solid var(--border)">
+          <b style="display:block;margin-top:10px">Гучь Дмитрий Дмитриевич</b>
+          <span style="font-size:13px;color:var(--muted)">Зам. директора по воспитательной работе</span>
+        </div>
+
+        <div class="card padded" style="text-align:center">
+          <img src="assets/img/about/deputy-uvr-1.jpg" alt="Цилинская Анна Ивановна"
+               style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px;border:1px solid var(--border)">
+          <b style="display:block;margin-top:10px">Цилинская Анна Ивановна</b>
+          <span style="font-size:13px;color:var(--muted)">Зам. директора по учебно-воспитательной работе</span>
+        </div>
+
+        <div class="card padded" style="text-align:center">
+          <img src="assets/img/about/deputy-uvr-2.jpg" alt="Узун Оксана Николаевна"
+               style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px;border:1px solid var(--border)">
+          <b style="display:block;margin-top:10px">Узун Оксана Николаевна</b>
+          <span style="font-size:13px;color:var(--muted)">Зам. директора по учебно-воспитательной работе</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    © <span id="year"></span> Теоретический лицей им. Дмитрия Мавроди
+  </div>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

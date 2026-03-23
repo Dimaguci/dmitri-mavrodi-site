@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Вакансии — ТЛ им. Д. Мавроди</title>
+  <meta name="description" content="Вакансии Теоретического лицея им. Дмитрия Мавроди (Комрат): актуальные позиции и порядок подачи." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <a class="brand" href="index.html">
+        <span class="logo"><img src="assets/img/logo.png" alt="Логотип ТЛ им. Д. Мавроди"></span>
+        <span class="title">
+          <strong>ТЛ им. Д. Мавроди</strong>
+          <span>мун. Комрат</span>
+        </span>
+      </a>
+      <button class="burger" data-menu-open><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- MENU -->
+ <div class="overlay" data-overlay>
+    <div class="backdrop" data-backdrop></div>
+
+    <div class="panel" role="dialog" aria-modal="true" aria-label="Меню сайта">
+      <div class="panel-head">
+        <b>Меню</b>
+        <button class="close" type="button" aria-label="Закрыть меню" data-menu-close>✕</button>
+      </div>
+
+      <nav class="menu" aria-label="Навигация">
+        <a href="index.html">
+          <b>Главная</b>
+          <span>Главная страница</span>
+        </a>
+        <a href="about.html">
+          <b>О нас</b>
+          <span>Информация о лицее, руководство, история</span>
+        </a>
+        <a href="admission.html">
+          <b>Приём</b>
+          <span>Правила, сроки, документы для поступления</span>
+        </a>
+        <a href="news.html">
+          <b>Новости</b>
+          <span>Лента событий и обновлений лицея</span>
+        </a>
+        <a href="timetable.html">
+          <b>Расписание</b>
+          <span>Занятия, изменения, актуальная версия</span>
+        </a>
+        <a href="teachers.html">
+          <b>Преподаватели</b>
+          <span>Состав педагогов и направления</span>
+        </a>
+        <a href="documents.html">
+          <b>Документы</b>
+          <span>Приказы, положения, протоколы и др.</span>
+        </a>
+        <a href="contacts.html">
+          <b>Контакты</b>
+          <span>Адрес, карта, форма обратной связи</span>
+        </a>
+        <a href="vacancies.html">
+          <b>Вакансии</b>
+          <span>Открытые вакансии и требования</span>
+        </a>
+        <a href="admin.html">
+          <b>Админ (новости)</b>
+          <span>Добавление новостей и выгрузка news.json</span>
+        </a>
+        <a href="admin-docs.html">
+          <b>Админ (документы)</b>
+          <span>Добавление документов и выгрузка documents.json</span>
+        </a>
+        <a href="admin-timetable.html">
+          <b>Админ (расписание)</b>
+          <span>Добавление расписания и выгрузка timetable.json</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+<main>
+  <section class="section">
+    <div class="container">
+      <h2>Вакансии</h2>
+      <p class="lead">
+        Актуальные вакансии Теоретического лицея им. Дмитрия Мавроди (мун. Комрат).
+        Если подходящих позиций нет — вы всё равно можете отправить резюме в кадровый резерв.
+      </p>
+    </div>
+  </section>
+  <section class="section alt">
+    <div class="container">
+      <h3>Открытые позиции</h3>
+
+      <!-- Если вакансий пока нет — оставляем этот блок -->
+      <div class="card padded">
+        <b>Сейчас нет активных вакансий</b>
+        <div style="margin-top:8px;color:var(--muted)">
+          Следите за обновлениями в разделе «Новости» или напишите нам, чтобы попасть в кадровый резерв.
+        </div>
+      </div>
+      
+      <!--
+        Когда появится вакансия, используем этот код вместо предыдущего:
+      <article class="vac-card">
+        <div class="vac-top">
+          <div>
+            <b class="vac-title">Учитель информатики</b>
+            <div class="vac-meta">Занятость: полная • Дата публикации: 2026-01-20</div>
+          </div>
+          <span class="vac-tag">Открыто</span>
+        </div>
+
+        <div class="vac-body">
+          <div><b>Требования:</b></div>
+          <ul>
+            <li>Педагогическое образование по профилю</li>
+            <li>Опыт работы приветствуется</li>
+            <li>Владение современными методиками обучения</li>
+          </ul>
+
+          <div><b>Обязанности:</b></div>
+          <ul>
+            <li>Проведение уроков согласно учебному плану</li>
+            <li>Ведение документации</li>
+            <li>Участие в школьных мероприятиях</li>
+          </ul>
+
+          <div class="vac-actions">
+            <a class="btn primary" href="mailto:lic.01.mavrodi@gmail.com?subject=Вакансия%3A%20Учитель%20информатики">Откликнуться по email</a>
+            <a class="btn" href="contacts.html">Контакты</a>
+          </div>
+        </div>
+      </article>
+      -->
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h3>Как подать заявку</h3>
+
+      <div class="card padded" style="margin-bottom:16px;">
+        <b>Способы связи</b>
+        <div style="margin-top:10px;color:var(--muted);line-height:1.7">
+          <div>• Email: <a href="mailto:lic.01.mavrodi@gmail.com">lic.01.mavrodi@gmail.com</a></div>
+          <div>• Через форму на странице <a href="contacts.html">Контакты</a></div>
+        </div>
+      </div>
+
+      <div class="card padded">
+        <b>Что указать в письме</b>
+        <ul style="margin:10px 0 0; padding-left:18px; color:var(--muted); line-height:1.7">
+          <li>ФИО кандидата</li>
+          <li>Желаемая должность</li>
+          <li>Контактный телефон и email</li>
+          <li>Опыт работы (кратко)</li>
+          <li>Резюме (вложением) — если есть</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div><b>ТЛ им. Д. Мавроди</b></div>
+    <div style="margin-top:6px">© <span id="year"></span></div>
+  </div>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

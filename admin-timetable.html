@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Админ — Расписание</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <a class="brand" href="index.html" aria-label="На главную">
+          <span class="logo">
+            <img src="assets/img/logo.png" alt="Логотип: ТЛ им. Д. Мавроди">
+          </span>
+          <span class="title">
+            <strong>ТЛ им. Д. Мавроди</strong>
+            <span>мун. Комрат</span>
+          </span>
+        </a>
+
+        <div class="header-actions">
+          <button class="burger" type="button" aria-label="Открыть меню" data-menu-open>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+ <!-- MENU -->
+ <div class="overlay" data-overlay>
+    <div class="backdrop" data-backdrop></div>
+
+    <div class="panel" role="dialog" aria-modal="true" aria-label="Меню сайта">
+      <div class="panel-head">
+        <b>Меню</b>
+        <button class="close" type="button" aria-label="Закрыть меню" data-menu-close>✕</button>
+      </div>
+
+      <nav class="menu" aria-label="Навигация">
+        <a href="index.html">
+          <b>Главная</b>
+          <span>Главная страница</span>
+        </a>
+        <a href="about.html">
+          <b>О нас</b>
+          <span>Информация о лицее, руководство, история</span>
+        </a>
+        <a href="admission.html">
+          <b>Приём</b>
+          <span>Правила, сроки, документы для поступления</span>
+        </a>
+        <a href="news.html">
+          <b>Новости</b>
+          <span>Лента событий и обновлений лицея</span>
+        </a>
+        <a href="timetable.html">
+          <b>Расписание</b>
+          <span>Занятия, изменения, актуальная версия</span>
+        </a>
+        <a href="teachers.html">
+          <b>Преподаватели</b>
+          <span>Состав педагогов и направления</span>
+        </a>
+        <a href="documents.html">
+          <b>Документы</b>
+          <span>Приказы, положения, протоколы и др.</span>
+        </a>
+        <a href="contacts.html">
+          <b>Контакты</b>
+          <span>Адрес, карта, форма обратной связи</span>
+        </a>
+        <a href="vacancies.html">
+          <b>Вакансии</b>
+          <span>Открытые вакансии и требования</span>
+        </a>
+        <a href="admin.html">
+          <b>Админ (новости)</b>
+          <span>Добавление новостей и выгрузка news.json</span>
+        </a>
+        <a href="admin-docs.html">
+          <b>Админ (документы)</b>
+          <span>Добавление документов и выгрузка documents.json</span>
+        </a>
+        <a href="admin-timetable.html">
+          <b>Админ (расписание)</b>
+          <span>Добавление расписания и выгрузка timetable.json</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+  <main>
+    <section class="section alt">
+      <div class="container">
+        <h2>Админ — Расписание</h2>
+        <p class="lead">Добавляй классы и уроки, затем скачай <code>timetable.json</code> и замени <code>data/timetable.json</code>.</p>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;" id="grid">
+          <div class="card padded">
+            <h3 style="margin:0 0 14px;font-size:18px;">Добавление</h3>
+
+            <label style="display:block;font-size:13px;color:var(--muted);margin:10px 0 6px;">Класс</label>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+              <select id="classSelect"
+                style="flex:1;min-width:220px;padding:10px 12px;border:1px solid var(--border);border-radius:14px;background:#fff;outline:none;"></select>
+              <button class="btn" type="button" id="addClassBtn">+ Класс</button>
+            </div>
+
+            <label style="display:block;font-size:13px;color:var(--muted);margin:10px 0 6px;">День</label>
+            <select id="daySelect"
+              style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:14px;background:#fff;outline:none;">
+              <option value="monday">Понедельник</option>
+              <option value="tuesday">Вторник</option>
+              <option value="wednesday">Среда</option>
+              <option value="thursday">Четверг</option>
+              <option value="friday">Пятница</option>
+            </select>
+
+            <div style="margin-top:14px; border-top:1px solid var(--border); padding-top:14px;">
+              <h4 style="margin:0 0 10px;font-size:16px;">Новый урок</h4>
+
+              <label style="display:block;font-size:13px;color:var(--muted);margin:10px 0 6px;">Время</label>
+              <input id="time" type="text" placeholder="08:00–08:45"
+                style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:14px;background:#fff;outline:none;" />
+
+              <label style="display:block;font-size:13px;color:var(--muted);margin:10px 0 6px;">Предмет</label>
+              <input id="subject" type="text" placeholder="Математика"
+                style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:14px;background:#fff;outline:none;" />
+
+              <label style="display:block;font-size:13px;color:var(--muted);margin:10px 0 6px;">Кабинет</label>
+              <input id="room" type="text" placeholder="12"
+                style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:14px;background:#fff;outline:none;" />
+
+              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;">
+                <button class="btn primary" type="button" id="addLessonBtn">Добавить урок</button>
+                <button class="btn" type="button" id="clearLessonBtn">Очистить</button>
+              </div>
+            </div>
+
+            <div style="margin-top:14px; padding:12px; border:1px dashed var(--border); border-radius:14px; color:var(--muted); font-size:13px;">
+              <b>Совет:</b> после изменений нажми “Скачать timetable.json” и замени файл в репозитории.
+            </div>
+          </div>
+          <div class="card padded">
+            <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:10px;flex-wrap:wrap;">
+              <div>
+                <h3 style="margin:0 0 6px;font-size:18px;">Предпросмотр</h3>
+                <div id="meta" style="font-size:12px;color:var(--muted)"></div>
+              </div>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                <button class="btn primary" type="button" id="downloadBtn">Скачать timetable.json</button>
+                <button class="btn" type="button" id="resetBtn" title="Сбросить всё (локально)">Сброс</button>
+              </div>
+            </div>
+
+            <div id="preview" style="margin-top:14px;"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div>
+          <div><b>ТЛ им. Д. Мавроди</b></div>
+          <div style="margin-top:6px">© <span id="year"></span></div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn" href="timetable.html">Расписание</a>
+          <a class="btn" href="index.html">Главная</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/admin-timetable.js"></script>
+
+  <script>
+    const mq = window.matchMedia("(max-width: 980px)");
+    const grid = document.getElementById("grid");
+    function applyGrid(){ grid.style.gridTemplateColumns = mq.matches ? "1fr" : "1fr 1fr"; }
+    mq.addEventListener("change", applyGrid);
+    applyGrid();
+  </script>
+</body>
+</html>

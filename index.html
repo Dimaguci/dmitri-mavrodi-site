@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ТЛ им. Д. Мавроди — Комрат</title>
+  <meta name="description" content="Официальный сайт: новости, объявления, расписание, документы, контакты." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <a class="brand" href="index.html" aria-label="На главную">
+          <span class="logo">
+            <img src="assets/img/logo.png" alt="Логотип: ТЛ им. Д. Мавроди">
+          </span>
+          <span class="title">
+            <strong>ТЛ им. Д. Мавроди</strong>
+            <span>мун. Комрат</span>
+          </span>
+        </a>
+
+        <div class="header-actions">
+          <div class="searchbox" title="Поиск по странице">
+            <span class="icon">🔎</span>
+            <input id="siteSearch" type="search" placeholder="Поиск по странице..." autocomplete="off" aria-label="Поиск по странице" aria-expanded="false" aria-controls="siteSearchResults" />
+            <div class="search-results" id="siteSearchResults" hidden></div>
+          </div>
+
+          <button class="burger" type="button" aria-label="Открыть меню" data-menu-open>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+ <!-- MENU -->
+ <div class="overlay" data-overlay>
+    <div class="backdrop" data-backdrop></div>
+
+    <div class="panel" role="dialog" aria-modal="true" aria-label="Меню сайта">
+      <div class="panel-head">
+        <b>Меню</b>
+        <button class="close" type="button" aria-label="Закрыть меню" data-menu-close>✕</button>
+      </div>
+
+      <nav class="menu" aria-label="Навигация">
+        <a href="index.html">
+          <b>Главная</b>
+          <span>Главная страница</span>
+        </a>
+        <a href="about.html">
+          <b>О нас</b>
+          <span>Информация о лицее, руководство, история</span>
+        </a>
+        <a href="admission.html">
+          <b>Приём</b>
+          <span>Правила, сроки, документы для поступления</span>
+        </a>
+        <a href="news.html">
+          <b>Новости</b>
+          <span>Лента событий и обновлений лицея</span>
+        </a>
+        <a href="timetable.html">
+          <b>Расписание</b>
+          <span>Занятия, изменения, актуальная версия</span>
+        </a>
+        <a href="teachers.html">
+          <b>Преподаватели</b>
+          <span>Состав педагогов и направления</span>
+        </a>
+        <a href="documents.html">
+          <b>Документы</b>
+          <span>Приказы, положения, протоколы и др.</span>
+        </a>
+        <a href="contacts.html">
+          <b>Контакты</b>
+          <span>Адрес, карта, форма обратной связи</span>
+        </a>
+        <a href="vacancies.html">
+          <b>Вакансии</b>
+          <span>Открытые вакансии и требования</span>
+        </a>
+        <a href="admin.html">
+          <b>Админ (новости)</b>
+          <span>Добавление новостей и выгрузка news.json</span>
+        </a>
+        <a href="admin-docs.html">
+          <b>Админ (документы)</b>
+          <span>Добавление документов и выгрузка documents.json</span>
+        </a>
+        <a href="admin-timetable.html">
+          <b>Админ (расписание)</b>
+          <span>Добавление расписания и выгрузка timetable.json</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+  <main>
+    <section class="hero">
+      <div class="container">
+
+        <div class="slider" data-slider>
+          <!-- Slides -->
+          <div class="slide active">
+            <img src="assets/img/slide-1.jpg" alt="Фото мероприятия 1">
+          </div>
+          <div class="slide">
+            <img src="assets/img/slide-2.jpg" alt="Фото мероприятия 2">
+          </div>
+          <div class="slide">
+            <img src="assets/img/slide-3.jpg" alt="Фото мероприятия 3">
+          </div>
+          <div class="slide">
+            <img src="assets/img/slide-4.jpg" alt="Фото мероприятия 4">
+          </div>
+          <div class="slider-overlay">
+            <div class="slider-content">
+              <span class="kicker">Официальный сайт</span>
+              <h1>Качество образования. Дисциплина. Успех.</h1>
+              <p>
+                Актуальные новости, объявления, расписание и документы.
+                Сайт адаптирован для мобильных устройств.
+              </p>
+
+              <div class="hero-actions">
+                <a class="btn primary" href="news.html">Новости</a>
+                <a class="btn primary" href="documents.html">Документы</a>
+                <a class="btn primary" href="timetable.html">Расписание</a>
+              </div>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="arrow" type="button" aria-label="Предыдущее фото" data-prev>‹</button>
+            <div style="display:flex;gap:8px" aria-label="Переключатели слайдов">
+              <button class="dot active" type="button" aria-label="Слайд 1" data-dot="0"></button>
+              <button class="dot" type="button" aria-label="Слайд 2" data-dot="1"></button>
+              <button class="dot" type="button" aria-label="Слайд 3" data-dot="2"></button>
+              <button class="dot" type="button" aria-label="Слайд 4" data-dot="3"></button>
+            </div>
+            <button class="arrow" type="button" aria-label="Следующее фото" data-next>›</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="section alt">
+      <div class="container">
+        <h2>Последние новости</h2>
+        <p class="lead">
+          Последние 4 новости лицея. Полная лента — на странице “Новости”.
+        </p>
+        <div data-home-news></div>
+        <div style="margin-top:14px">
+          <a class="btn primary" href="news.html">Все новости</a>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2>Быстрый доступ</h2>
+        <p class="lead">Самое важное — в один клик.</p>
+
+        <div class="menu" style="padding:0; grid-template-columns: 1fr 1fr 1fr;">
+          <a href="timetable.html">
+            <b>Расписание</b>
+            <span>Актуальная версия и изменения</span>
+          </a>
+          <a href="contacts.html">
+            <b>Контакты</b>
+            <span>Свяжитесь с нами</span>
+          </a>
+          <a href="documents.html">
+            <b>Документы</b>
+            <span>Положения, приказы, протоколы</span>
+          </a>
+        </div>
+
+        
+      </div>
+    </section>
+     <section class="section">
+    <div class="container">
+      <h2>О лицее</h2>
+      <p class="lead">
+        Теоретический лицей им. Дмитрия Мавроди — современное государственное образовательное учреждение,
+        расположенное в мун. Комрат.
+      </p>
+
+      <div style="margin-top:16px;border-radius:20px;overflow:hidden;border:1px solid var(--border)">
+        <img src="assets/img/about/building.jpg"
+             alt="Здание Теоретического лицея им. Д. Мавроди"
+             style="width:100%;height:auto;display:block">
+      </div>
+    </div>
+  </section>
+  <section class="section alt">
+    <div class="container">
+
+      <div class="card padded" style="margin-bottom:16px;">
+        <h3>Общая информация</h3>
+        <p>
+          ПУ «Теоретический лицей им. Дмитрия Мавроди» — государственное учебное заведение,
+          осуществляющее образовательную деятельность в соответствии с национальными стандартами
+          Республики Молдова.
+        </p>
+        <p>
+          Основной целью лицея является формирование интеллектуально развитой,
+          социально ответственной личности, готовой к продолжению образования и
+          активному участию в жизни общества.
+        </p>
+      </div>
+
+      <div class="card padded" style="margin-bottom:16px;">
+        <h3>История и традиции</h3>
+        <p>
+          Лицей имеет более чем полувековую историю. В 2024 году учреждение отметило
+          <b>55-летие со дня основания</b>.
+        </p>
+        <p>
+          В лицее действует мини-музей истории и этнографии, способствующий
+          сохранению культурного наследия региона и воспитанию уважения к традициям.
+        </p>
+      </div>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h3>Руководство лицея</h3>
+
+      <div style="
+        margin-top:16px;
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+        gap:16px;
+      ">
+
+        <div class="card padded" style="text-align:center">
+          <img src="assets/img/about/director.jpg" alt="Болгар Максим Андреевич"
+               style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px;border:1px solid var(--border)">
+          <b style="display:block;margin-top:10px">Болгар Максим Андреевич</b>
+          <span style="font-size:13px;color:var(--muted)">Директор лицея</span>
+        </div>
+
+        <div class="card padded" style="text-align:center">
+          <img src="assets/img/about/deputy-vr.jpg" alt="Гучь Дмитрий Дмитриевич"
+               style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px;border:1px solid var(--border)">
+          <b style="display:block;margin-top:10px">Гучь Дмитрий Дмитриевич</b>
+          <span style="font-size:13px;color:var(--muted)">Зам. директора по воспитательной работе</span>
+        </div>
+
+        <div class="card padded" style="text-align:center">
+          <img src="assets/img/about/deputy-uvr-1.jpg" alt="Цилинская Анна Ивановна"
+               style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px;border:1px solid var(--border)">
+          <b style="display:block;margin-top:10px">Цилинская Анна Ивановна</b>
+          <span style="font-size:13px;color:var(--muted)">Зам. директора по учебно-воспитательной работе</span>
+        </div>
+
+        <div class="card padded" style="text-align:center">
+          <img src="assets/img/about/deputy-uvr-2.jpg" alt="Узун Оксана Николаевна"
+               style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px;border:1px solid var(--border)">
+          <b style="display:block;margin-top:10px">Узун Оксана Николаевна</b>
+          <span style="font-size:13px;color:var(--muted)">Зам. директора по учебно-воспитательной работе</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+     <section class="section alt">
+    <div class="container">
+      <h2>Контакты</h2>
+      <p class="lead">Свяжитесь с нами удобным способом</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px" id="grid">
+        <div class="card padded">
+          <b>Адрес</b>
+          <p>Молдова, мун. Комрат<br>ул. Островского, 2</p>
+
+          <b>Электронная почта</b>
+          <p><a href="mailto:lic.01.mavrodi@gmail.com">lic.01.mavrodi@gmail.com</a></p>
+
+          <b>Карта</b>
+          <div style="margin-top:10px;border-radius:16px;overflow:hidden;border:1px solid var(--border)">
+            <iframe
+              src="https://www.google.com/maps?q=Комрат,+ул.+Островского+2&output=embed"
+              width="100%" height="260" style="border:0" loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="card padded">
+          <h3>Написать нам</h3>
+
+          <form id="contactForm">
+            <input type="text" name="from_name" placeholder="Ваше имя" required
+              style="width:100%;margin-bottom:10px;padding:10px;border-radius:14px;border:1px solid var(--border)">
+
+            <input type="email" name="from_email" placeholder="Ваш email" required
+              style="width:100%;margin-bottom:10px;padding:10px;border-radius:14px;border:1px solid var(--border)">
+
+            <textarea name="message" placeholder="Сообщение" required rows="6"
+              style="width:100%;margin-bottom:10px;padding:10px;border-radius:14px;border:1px solid var(--border)"></textarea>
+
+            <button class="btn primary" type="submit">Отправить</button>
+            <div id="formStatus" style="margin-top:10px;font-size:13px"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div>
+          <div><b>ТЛ им. Д. Мавроди</b></div>
+          <div style="margin-top:6px">© <span id="year"></span> — Этот сайт был создан в рамках IT-олимпиады</div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn" href="contacts.html">Контакты</a>
+          <a class="btn" href="documents.html">Документы</a>
+          <a class="btn" href="news.html">Новости</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/slider.js"></script>
+  <script src="assets/js/news-home.js"></script>
+</body>
+</html>
